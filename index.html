@@ -7,53 +7,54 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <script>
-        function computerPlay () {
-            let playOptions = ["Rock", "Paper", "Scissors"];
-            let optionPlayed = playOptions[Math.floor(Math.random()*playOptions.length)];
-            // The reason for the square brackets in the line immmediately above is that it
-            // indicates I'm using the indexes of the elements of the array.
-            // console.log(optionPlayed);
-            return optionPlayed;
-        }
+    <!-- <script>
+
+        // function computerPlay () {
+        //     let playOptions = ["Rock", "Paper", "Scissors"];
+        //     let optionPlayed = playOptions[Math.floor(Math.random()*playOptions.length)];
+        //     // The reason for the square brackets in the line immmediately above is that it
+        //     // indicates I'm using the indexes of the elements of the array.
+        //     // console.log(optionPlayed);
+        //     return optionPlayed;
+        // }
         // computerPlay();
 
-        let playerSelection;
-        let computerSelection;
+        // let playerSelection;
+        // let computerSelection;
 
-        let computersPick = computerPlay();
-        computerSelection = computersPick.toUpperCase();
+        // let computersPick = computerPlay();
+        // computerSelection = computersPick.toUpperCase();
 
-        let playersPick = "rock";
-        playerSelection = playersPick.toUpperCase();
+        // let playersPick = "rock";
+        // playerSelection = playersPick.toUpperCase();
 
-        function playRound (playerSelection, computerSelection) {
-            let output;
-            if (playerSelection === "ROCK" && computerSelection === "SCISSORS") {
-                output = console.log("You Win! Rock crushes Scissors");
-            } 
-            else if (playerSelection === "SCISSORS" && computerSelection === "ROCK") {
-                output = console.log("You Lose! Computer Wins! Rock crushes Scissors");
-            } 
-            else if (playerSelection === "PAPER" && computerSelection === "ROCK") {
-                output = console.log("You Win! Paper covers Rock");
-            } 
-            else if (playerSelection === "ROCK" && computerSelection === "PAPER") {
-                output = console.log("You Lose! Computer Wins! Paper covers Rock");
-            } 
-            else if (playerSelection === "SCISSORS" && computerSelection === "PAPER") {
-                output = console.log("You Win! Scissors cuts Paper");
-            } 
-            else if (playerSelection === "PAPER" && computerSelection === "SCISSORS") {
-                output = console.log("You Lose! Computer Wins! Scissors cuts Paper");
-            }
-            return output;  
-            // return (playerSelection, computerSelection);
-        }
-        // return playRound(playerSelection, computerSelection);
+        // function playRound (playerSelection, computerSelection) {
+        //     let output;
+        //     if (playerSelection === "ROCK" && computerSelection === "SCISSORS") {
+        //         output = console.log("You Win! Rock crushes Scissors");
+        //     } 
+        //     else if (playerSelection === "SCISSORS" && computerSelection === "ROCK") {
+        //         output = console.log("You Lose! Computer Wins! Rock crushes Scissors");
+        //     } 
+        //     else if (playerSelection === "PAPER" && computerSelection === "ROCK") {
+        //         output = console.log("You Win! Paper covers Rock");
+        //     } 
+        //     else if (playerSelection === "ROCK" && computerSelection === "PAPER") {
+        //         output = console.log("You Lose! Computer Wins! Paper covers Rock");
+        //     } 
+        //     else if (playerSelection === "SCISSORS" && computerSelection === "PAPER") {
+        //         output = console.log("You Win! Scissors cuts Paper");
+        //     } 
+        //     else if (playerSelection === "PAPER" && computerSelection === "SCISSORS") {
+        //         output = console.log("You Lose! Computer Wins! Scissors cuts Paper");
+        //     }
+        //     return output;  
+        //     // return (playerSelection, computerSelection);
+        // }
+        // // return playRound(playerSelection, computerSelection);
         
-        console.log(playRound(playerSelection, computerSelection));
-
-    </script>
+        // console.log(playRound(playerSelection, computerSelection));
+    </script> -->
+    <script src="game.js"></script>
 </body>
 </html>
