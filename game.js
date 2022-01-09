@@ -3,8 +3,8 @@ function game() {
     let cScore = 0;
     let winner = console.log("Rock, Paper, Scissors!");
 
-    // Play match
-    const playMatch = () => {
+    // Play game
+    const playGame = () => {
         const playerChoice = prompt("Rock, Paper or Scissors: ").toLowerCase();
         console.log(`Player: ${playerChoice}`);
 
@@ -88,12 +88,6 @@ function game() {
         }
     };
 
-
-    playMatch();
-    playMatch();
-    playMatch();
-    playMatch();
-    playMatch();
     declareWinner(pScore, cScore);
 }
 game();
