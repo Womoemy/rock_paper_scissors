@@ -13,44 +13,50 @@
         <header class="header">
             <img class="logo" src="images/logo.svg"/>
             <div class="score" id="score">
-                <p class="text">
-                    score
-                    <span>0</span>
-                </p>
+                <h4 class="text">score</h4>
+                <p>0</p>
             </div>
         </header>
-        <div class="choices">
-            <div id="rock" class="choice">
-                <img class="hand-rock" src="images/icon-rock.svg" />
+        <main>
+            <div class="choices">
+                <button id="paper" class="choice paper">
+                    <span class="wrapper">
+                        <img class="hand-paper" src="images/icon-paper.svg" />
+                    </span>
+                </button>
+                <button id="scissors" class="choice scissors">
+                    <span class="wrapper">
+                        <img class="hand-scissors" src="images/icon-scissors.svg" />
+                    </span>
+                </button>
+                <button id="rock" class="choice rock">
+                    <span class="wrapper">
+                        <img class="hand-rock" src="images/icon-rock.svg" />
+                    </span>
+                </button>
             </div>
-            <div id="paper" class="choice">
-                <img class="hand-paper" src="images/icon-paper.svg" />
-            </div>
-            <div id="scissors" class="choice">
-                <img class="hand-scissors" src="images/icon-scissors.svg" />
-            </div>
-        </div>
-        <div class="result">
-            <!-- <div class="playerChoice">
-                <div class="choice">
-                    <img src="" id="" class=""/>
-                </div>  
-                <p class="text"></p>
-            </div>
-            <div class="computerChoice">
-                <div class="choice">
-                    <img src="" id="" class=""/>
+            <div class="result">
+                <!-- <div class="playerChoice">
+                    <div class="choice">
+                        <img src="" id="" class=""/>
+                    </div>  
+                    <p class="text"></p>
                 </div>
-                <p class="text"></p>
+                <div class="computerChoice">
+                    <div class="choice">
+                        <img src="" id="" class=""/>
+                    </div>
+                    <p class="text"></p>
+                </div>
+                <div class="result-text">
+                    <p class="text"></p>
+                    <button class="restart text">play again</button>
+                </div> -->
             </div>
-            <div class="result-text">
-                <p class="text"></p>
-                <button class="restart text">play again</button>
-            </div> -->
-        </div>
-        <div class="modal">
-            <button id="rules" class="modal-content text">rules</button>
-        </div>
+        </main>
+        <footer>
+            <button id="rules" class="modal text">rules</button>
+        </footer>   
     </div>
 </body>
 </html>
