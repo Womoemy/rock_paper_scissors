@@ -12,24 +12,24 @@
     <div class="container">
         <header class="header">
             <img class="logo" src="images/logo.svg"/>
-            <div class="score" id="score">
+            <div class="score-box" >
                 <h4 class="text">score</h4>
-                <p>0</p>
+                <p id="score">0</p>
             </div>
         </header>
         <main>
             <div class="choices">
-                <button id="paper" class="choice paper">
+                <button class="choice paper" data-choice="paper">
                     <span class="wrapper">
                         <img class="hand-paper" src="images/icon-paper.svg" />
                     </span>
                 </button>
-                <button id="scissors" class="choice scissors">
+                <button class="choice scissors" data-choice="scissors">
                     <span class="wrapper">
                         <img class="hand-scissors" src="images/icon-scissors.svg" />
                     </span>
                 </button>
-                <button id="rock" class="choice rock">
+                <button class="choice rock" data-choice="rock">
                     <span class="wrapper">
                         <img class="hand-rock" src="images/icon-rock.svg" />
                     </span>
@@ -54,9 +54,32 @@
                 </div> -->
             </div>
         </main>
-        <footer>
-            <button id="rules" class="modal text">rules</button>
-        </footer>   
+   
     </div>
+    <div class="selection">
+        <div class="player-selection">
+            <h2 class="text">You picked</h2>
+            <button class="choice scissors">
+                <span class="wrapper">
+                    <img class="hand-scissors" src="images/icon-scissors.svg" />
+                </span>
+            </button>
+        </div>
+        <div class="result-box">
+            <h1 class="result text">You <span id="win">win</span></h1>
+            <button class="btn text" id="reset">Play again</button>
+        </div>
+        <div class="computer-selection">
+            <h2 class="text">The house picked</h2>
+            <button class="choice scissors">
+                <span class="wrapper">
+                    <img class="hand-scissors" src="images/icon-scissors.svg" />
+                </span>
+            </button>
+        </div>
+    </div>
+    <footer>
+        <button id="rules" class="modal text">rules</button>
+    </footer>
 </body>
 </html>

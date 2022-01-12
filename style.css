@@ -33,7 +33,7 @@ body {
   height: 72px;
   margin: auto 0;
 }
-.score {
+.score-box {
   background-color: #fff;
   border-radius: 10px;
   display: flex;
@@ -41,12 +41,12 @@ body {
   padding: 5px 10px;
   width: 72px;
 }
-.score h4 {
+.score-box h4 {
   color: hsl(229, 64%, 46%);
   font-family: inherit;
   margin: 0 auto;
 }
-.score p {
+#score {
   color: hsl(229, 25%, 31%);
   font-family: inherit;
   font-size: 56px;
@@ -120,7 +120,7 @@ body {
 footer {
   display: flex;
 }
-.modal {
+#rules {
   background-color: inherit;
   border-radius: 10px;
   bottom: 0;
@@ -130,4 +130,67 @@ footer {
   margin: 30px auto;
   padding: 10px;
   width: 150px;
+}
+
+/* Game flow */
+.btn {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-color: #fff;
+  color: hsl(229, 25%, 31%);
+  font-size: 20px;
+  font-family: inherit;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+}
+.selection {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+}
+.selection h1, h2 {
+  font-family: inherit;
+  color: #fff;
+}
+.selection h2 {
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin: 20px 0;
+}
+.player-selection {
+  order: -1;
+}
+.computer-selection {
+  order: 0;
+}
+.result-box {
+  order: 1;
+  margin: 30px auto;
+}
+.result {
+  margin: 0 0 20px 0;
+}
+
+
+/* Tablet and Desktop Styles */
+@media screen and (min-width: 576px) {
+  .container {
+    width: 60%;
+  }
+  .score-box {
+    width: 120px;
+  }
+  .result-box {
+    order: 0;
+  }
+  .computer-selection {
+    order: 1;
+  }
+  .selection .choice {
+    transform: scale(1.2);
+  }
 }
