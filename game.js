@@ -93,10 +93,22 @@
 // }
 // game();
 
-// Florin Pop Code Mechanics
-const buttons = document.querySelectorAll('.choice');
-
+// FP Code Mechanics
+const buttons = document.querySelectorAll('.pick'); // change querySelector from 'pick' to 'option' later
 const scoreEl = document.getElementById('score');
+const main = document.getElementById('main');
+const selection = document.getElementById('selection');
+const reset = document.getElementById('reset');
+
+const user_select = document.getElementById('user-select');
+const computer_select = document.getElementById('computer-select');
+
+const winner =  document.getElementById('winner');
+
+// modal buttons and stuff
+const openBtn = document.getElementById('open');
+const closeBtn = document.getElementById('close');
+const modal = document.getElementById('modal');
 
 const choices = ['rock', 'paper', 'scissors'];
 
@@ -106,18 +118,35 @@ let userChoice = undefined;
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         userChoice = button.getAttribute('data-choice');
-
         // console.log(userChoice);
-        
         checkWinner();
     });
+});
+
+reset.addEventListener('click', () => {
+    main.style.display = 'flex';
+    selection.style.display = 'none';
+});
+
+openBtn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+});
+closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
 });
 
 function checkWinner() {
     const computerChoice = pickRandomChoice();
 
+    // update the view
+    updateSelection(user_select, userChoice);
+    updateSelection(computer_select, computerChoice);
+
+
     if(userChoice === computerChoice) {
         // draw
+        winner.textContent = 'draw';
+        // winner.innerText = 'draw';
     } 
     else if
     (   userChoice === 'paper' && computerChoice === 'rock' ||
@@ -126,19 +155,38 @@ function checkWinner() {
     ) {
         // user won
         updateScore(1);
+        winner.textContent = 'win';
+        // winner.innerText = 'win';
     } else {
         //user lost
-        updateScore(-1);
+        winner.textContent = 'lose';
+        // winner.innerText = 'lose';
     }
+    // show the selection | hide main
+    main.style.display = 'none';
+    selection.style.display = 'flex';
 }
 
-function updateScore(value) {
-    score += value;
+function updateScore() {
+    score += 1;
     scoreEl.innerText = score;
 }
 
 // Computer choice
 function pickRandomChoice() {
     return choices[Math.floor(Math.random() * choices.length)];
+}
+
+function updateSelection(selectionEl, choice) {
+    // class reset
+    selectionEl.classList.remove('rock');
+    selectionEl.classList.remove('paper');
+    selectionEl.classList.remove('scissors');
+
+    // update the image
+    const img = selectionEl.querySelector('img');
+    selectionEl.classList.add(`${choice}`);
+    img.src = `images/icon-${choice}.svg`;
+    img.alt = choice;
 }
 
