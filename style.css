@@ -149,12 +149,19 @@ body {
   top: 0;
   width: 100vw;
 }
+.rules-modal h2 {
+  color: hsl(229, 25%, 31%);
+  font-family: inherit;
+  margin-bottom: 40px;
+}
 .rules-modal button {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  margin-top: 40px;
-  transform: scale(1.5);
+  margin-top: 50px;
+  transform: scale(1.2);
+  position: fixed;
+  bottom: 10px;
 }
 
 /* Game flow */
@@ -172,7 +179,6 @@ body {
   align-items: center;
   display: none;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
   justify-content: center;
   margin: 0 auto;
   text-align: center;
@@ -244,6 +250,19 @@ body {
     transform: translateX(320%);
   }
   .rules-modal {
+    border-radius: 10px;
     display: none;
+    height: 450px;
+    margin: 40px 33%;
+    width: 400px;
+  }
+  .rules-modal h2 {
+    align-self: flex-start;
+    margin-left: 40px;
+  }
+  .rules-modal button {
+    position: absolute;
+    top: -350px;
+    right: 40px;
   }
 }
