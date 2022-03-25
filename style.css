@@ -32,24 +32,26 @@ body {
   height: 72px;
   margin: auto 0;
 }
-.score-box {
+.scoreboard {
   background-color: #fff;
   border-radius: 10px;
-  display: flex;
+  display: flex; 
   flex-direction: column;
   padding: 5px 10px;
-  width: 72px;
+  width: 150px;
 }
-.score-box h4 {
+.scoreboard p {
   color: hsl(229, 64%, 46%);
   font-family: inherit;
-  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 120px;
 }
-#score {
+.scoreboard span {
   color: hsl(229, 25%, 31%);
   font-family: inherit;
-  font-size: 56px;
-  margin: 0 auto;
+  font-size: 20px;
+  float: right;
 }
 
 /* Buttons */
@@ -216,8 +218,8 @@ body {
     width: 60%;
     margin-top: 32px;
   }
-  .score-box {
-    width: 120px;
+  .scoreboard {
+    width: 150px;
   }
   .result-box {
     order: 0;

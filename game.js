@@ -98,7 +98,7 @@ const buttons = document.querySelectorAll('.pick'); // change querySelector from
 const scoreEl = document.getElementById('score');
 const main = document.getElementById('main');
 const selection = document.getElementById('selection');
-const reset = document.getElementById('reset');
+const restart = document.getElementById('restart');
 
 const user_select = document.getElementById('user-select');
 const computer_select = document.getElementById('computer-select');
@@ -123,7 +123,7 @@ buttons.forEach(button => {
     });
 });
 
-reset.addEventListener('click', () => {
+restart.addEventListener('click', () => {
     main.style.display = 'flex';
     selection.style.display = 'none';
 });
