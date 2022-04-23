@@ -208,6 +208,9 @@ body {
 .result {
   margin: 0 0 20px 0;
 }
+.endgamebox {
+  display: none;
+}
 
 /* Tablet and Desktop Styles */
 @media screen and (min-width: 576px) {

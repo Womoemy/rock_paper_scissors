@@ -13,9 +13,9 @@
         <header class="header">
             <img class="logo" src="images/logo.svg"/>
             <div class="scoreboard">
-                <p class="text">player:<span id="yourScore">0</span></p>
+                <p class="text">you:<span id="yourScore">0</span></p>
                     
-                <p class="text">computer:<span id="compScore">0</span></p>
+                <p class="text">the house:<span id="compScore">0</span></p>
                     
             </div>
         </header>
@@ -57,7 +57,7 @@
         </div>
         <div class="result-box">
             <h1 class="result text">You <span id="winner">win</span></h1>
-            <button class="btn text" id="restart">Play again</button>
+            <button class="btn text" id="restart">Next Round</button>
         </div>
         <div class="computer-selection">
             <h2 class="text">The house picked</h2>
@@ -67,9 +67,17 @@
                 </span>
             </button>
         </div>
-    </div> 
+    </div>
+    <div class="endgamebox">
+        <h1 class="endgame text">You Win!</h1>
+        <button class="btn text" id="playagain">Play Again!</button>
+    </div>
     <footer>
         <button class="rules text" id="open">rules</button> 
-    </footer> 
+    </footer>
+    <!-- <div class="endgame-box">
+        <h1 class="endgame text">You Win!</h1>
+        <button class="btn text" id="playagain">Play Again!</button>
+    </div> -->
 </body>
 </html>

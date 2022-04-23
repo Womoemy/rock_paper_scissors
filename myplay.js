@@ -6,6 +6,7 @@ const selection_div = document.getElementsByClassName('selection');
 const result_span = document.getElementById('winner');
 const restart_btn = document.getElementById('restart');
 
+const endgame_div = document.querySelector('.endgamebox');
 const scoreboard = {
   player: 0,
   computer: 0
@@ -25,8 +26,14 @@ option_btns.forEach(choice => {
       
     play();
  
-    if (scoreboard.player == 5 || scoreboard.computer == 5) {
-      console.log('The game is over, the game is over now!');
+    if (scoreboard.player == 5) {
+      endgame_div.style.display = 'flex';
+      selection_div[0].style.display = 'none';
+
+    } else if (scoreboard.computer == 5) {
+      endgame_div.style.display = 'flex';
+      selection_div[0].style.display = 'none';
+
     }
   });
 });
@@ -104,8 +111,31 @@ function showWinner(winner, playerChoice, computerChoice) {
   compScore_span.innerText = scoreboard.computer;
 }
 
+
 // Play next round
 restart_btn.addEventListener('click', () => {
   selection_div[0].style.display = 'none';
   main_div.style.display = 'flex';
+});
+
+playagain_btn.addEventListener('click', function(e){
+  if (e.target && e.target.id == 'playagain') {
+  scoreboard.player = 0;
+  scoreboard.computer = 0;
+  // score.innerHTML = `
+  //   <p>Player: 0</p>
+  //   <p>Computer: 0</p>
+  // `;
+  selection_div[0].style.display = 'none';
+  // endgame_div.style.display = 'none';
+  main_div.style.display = 'flex';
+  }
+  // scoreboard.player = 0;
+  // scoreboard.computer = 0;
+  // // score.innerHTML = `
+  // //   <p>Player: 0</p>
+  // //   <p>Computer: 0</p>
+  // // `;
+  // selection_div[0].style.display = 'none';
+  // main_div.style.display = 'flex';
 });
