@@ -186,7 +186,7 @@ body {
   text-align: center;
   width: 80%;
 }
-.selection h1, h2 {
+.selection h1 {
   font-family: inherit;
   color: #fff;
 }
@@ -210,6 +210,18 @@ body {
 }
 .endgamebox {
   display: none;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  height: 60%;
+  flex-flow: column wrap;
+}
+.endgame {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #fff;
 }
 
 /* Tablet and Desktop Styles */

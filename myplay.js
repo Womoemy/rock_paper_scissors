@@ -5,8 +5,12 @@ const main_div = document.getElementById('main');
 const selection_div = document.getElementsByClassName('selection');
 const result_span = document.getElementById('winner');
 const restart_btn = document.getElementById('restart');
-
 const endgame_div = document.querySelector('.endgamebox');
+const endgame_h1 = document.querySelector('.endgame');
+const playagain_btn = document.getElementById('playagain');
+const openrules_btn = document.getElementById('open');
+const rules = document.getElementById('modal');
+
 const scoreboard = {
   player: 0,
   computer: 0
@@ -25,15 +29,14 @@ option_btns.forEach(choice => {
     playerChoice = choice.getAttribute('data-choice');
       
     play();
- 
-    if (scoreboard.player == 5) {
+
+    if (scoreboard.player == 5 || scoreboard.computer == 5) {
       endgame_div.style.display = 'flex';
       selection_div[0].style.display = 'none';
 
-    } else if (scoreboard.computer == 5) {
-      endgame_div.style.display = 'flex';
-      selection_div[0].style.display = 'none';
-
+      return scoreboard.player > scoreboard.computer
+      ? endgame_h1.textContent = 'Game Over, You Win!'
+      : endgame_h1.textContent = 'Game Over, You Lose!';
     }
   });
 });
@@ -111,31 +114,25 @@ function showWinner(winner, playerChoice, computerChoice) {
   compScore_span.innerText = scoreboard.computer;
 }
 
-
 // Play next round
 restart_btn.addEventListener('click', () => {
   selection_div[0].style.display = 'none';
   main_div.style.display = 'flex';
 });
 
-playagain_btn.addEventListener('click', function(e){
-  if (e.target && e.target.id == 'playagain') {
+// Play another game
+playagain_btn.addEventListener('click', () => {
   scoreboard.player = 0;
   scoreboard.computer = 0;
-  // score.innerHTML = `
-  //   <p>Player: 0</p>
-  //   <p>Computer: 0</p>
-  // `;
+  yourScore_span.innerText = scoreboard.player;
+  compScore_span.innerText = scoreboard.computer;
+
   selection_div[0].style.display = 'none';
-  // endgame_div.style.display = 'none';
+  endgame_div.style.display = 'none';
   main_div.style.display = 'flex';
-  }
-  // scoreboard.player = 0;
-  // scoreboard.computer = 0;
-  // // score.innerHTML = `
-  // //   <p>Player: 0</p>
-  // //   <p>Computer: 0</p>
-  // // `;
-  // selection_div[0].style.display = 'none';
-  // main_div.style.display = 'flex';
+});
+
+openrules_btn.addEventListener('click', () => {
+  rules.style.display = 'block';
+  // console.log('Display Game Rules');
 });
