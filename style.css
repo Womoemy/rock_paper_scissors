@@ -151,19 +151,32 @@ body {
   top: 0;
   width: 100vw;
 }
+.rules-modal > div {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 80%;
+}
 .rules-modal h2 {
   color: hsl(229, 25%, 31%);
   font-family: inherit;
-  margin-bottom: 40px;
 }
 .rules-modal button {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  margin-top: 50px;
   transform: scale(1.2);
-  position: fixed;
-  bottom: 10px;
+}
+.rules-modal p {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.rules-modal img {
+  margin: auto;
+  display: block;
 }
 
 /* Game flow */
@@ -272,14 +285,5 @@ body {
     height: 450px;
     margin: 40px 33%;
     width: 400px;
-  }
-  .rules-modal h2 {
-    align-self: flex-start;
-    margin-left: 40px;
-  }
-  .rules-modal button {
-    position: absolute;
-    top: -350px;
-    right: 40px;
   }
 }
