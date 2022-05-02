@@ -9,6 +9,7 @@ const endgame_div = document.querySelector('.endgamebox');
 const endgame_h1 = document.querySelector('.endgame');
 const playagain_btn = document.getElementById('playagain');
 const openrules_btn = document.getElementById('open');
+const closerules_btn = document.getElementById('close');
 const rules = document.getElementById('modal');
 
 const scoreboard = {
@@ -135,4 +136,7 @@ playagain_btn.addEventListener('click', () => {
 openrules_btn.addEventListener('click', () => {
   rules.style.display = 'block';
   // console.log('Display Game Rules');
+});
+closerules_btn.addEventListener('click', () => {
+  rules.style.display = 'none';
 });
