@@ -5,56 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="myplay.js" defer></script>
 </head>
 <body>
-    <!-- <script>
-
-        // function computerPlay () {
-        //     let playOptions = ["Rock", "Paper", "Scissors"];
-        //     let optionPlayed = playOptions[Math.floor(Math.random()*playOptions.length)];
-        //     // The reason for the square brackets in the line immmediately above is that it
-        //     // indicates I'm using the indexes of the elements of the array.
-        //     // console.log(optionPlayed);
-        //     return optionPlayed;
-        // }
-        // computerPlay();
-
-        // let playerSelection;
-        // let computerSelection;
-
-        // let computersPick = computerPlay();
-        // computerSelection = computersPick.toUpperCase();
-
-        // let playersPick = "rock";
-        // playerSelection = playersPick.toUpperCase();
-
-        // function playRound (playerSelection, computerSelection) {
-        //     let output;
-        //     if (playerSelection === "ROCK" && computerSelection === "SCISSORS") {
-        //         output = console.log("You Win! Rock crushes Scissors");
-        //     } 
-        //     else if (playerSelection === "SCISSORS" && computerSelection === "ROCK") {
-        //         output = console.log("You Lose! Computer Wins! Rock crushes Scissors");
-        //     } 
-        //     else if (playerSelection === "PAPER" && computerSelection === "ROCK") {
-        //         output = console.log("You Win! Paper covers Rock");
-        //     } 
-        //     else if (playerSelection === "ROCK" && computerSelection === "PAPER") {
-        //         output = console.log("You Lose! Computer Wins! Paper covers Rock");
-        //     } 
-        //     else if (playerSelection === "SCISSORS" && computerSelection === "PAPER") {
-        //         output = console.log("You Win! Scissors cuts Paper");
-        //     } 
-        //     else if (playerSelection === "PAPER" && computerSelection === "SCISSORS") {
-        //         output = console.log("You Lose! Computer Wins! Scissors cuts Paper");
-        //     }
-        //     return output;  
-        //     // return (playerSelection, computerSelection);
-        // }
-        // // return playRound(playerSelection, computerSelection);
-        
-        // console.log(playRound(playerSelection, computerSelection));
-    </script> -->
-    <script src="game.js"></script>
+    <div class="container">
+        <header class="header">
+            <img class="logo" src="images/logo.svg"/>
+            <div class="scoreboard">
+                <p class="text">you:<span id="yourScore">0</span></p>
+                    
+                <p class="text">the house:<span id="compScore">0</span></p>
+                    
+            </div>
+        </header>
+        <main id="main">
+            <div class="choices">
+                <button class="choice paper option" data-choice="paper">
+                    <span class="wrapper">
+                        <img class="hand-paper" src="images/icon-paper.svg" />
+                    </span>
+                </button>
+                <button class="choice scissors option" data-choice="scissors">
+                    <span class="wrapper">
+                        <img class="hand-scissors" src="images/icon-scissors.svg" />
+                    </span>
+                </button>
+                <button class="choice rock option" data-choice="rock">
+                    <span class="wrapper">
+                        <img class="hand-rock" src="images/icon-rock.svg" />
+                    </span>
+                </button>
+            </div>
+        </main>
+        <div class="rules-modal" id="modal">
+            <div>
+                <h2 class="text">rules</h2>
+                <button id="close">
+                    <img src="images/icon-close.svg" alt="close"/>
+                </button>
+            </div>
+            <p class="text">The first to 5 wins the game!</p>
+            <img src="images/image-rules.svg" alt="rules"/>   
+        </div>
+    </div>
+    <div class="selection" id="selection">
+        <div class="player-selection">
+            <h2 class="text">You picked</h2>
+            <button class="choice-display scissors" id="user-select">
+                <span class="wrapper">
+                    <img class="hand-scissors" src="images/icon-scissors.svg" />
+                </span>
+            </button>
+        </div>
+        <div class="result-box">
+            <h1 class="result text">You <span id="winner">win</span></h1>
+            <button class="btn text" id="restart">Next Round</button>
+        </div>
+        <div class="computer-selection">
+            <h2 class="text">The house picked</h2>
+            <button class="choice-display scissors" id="computer-select">
+                <span class="wrapper">
+                    <img class="hand-scissors" src="images/icon-scissors.svg" />
+                </span>
+            </button>
+        </div>
+    </div>
+    <div class="endgamebox">
+        <h1 class="endgame text"></h1>
+        <button class="btn text" id="playagain">Play Again!</button>
+    </div>
+    <footer>
+        <button class="rules text" id="open">rules</button> 
+    </footer>
 </body>
 </html>
