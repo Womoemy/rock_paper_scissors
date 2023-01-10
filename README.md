@@ -4,5 +4,7 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
 
 ### Screenshot
 
+![](images/rps.png)
+
 It is fully responsive and available online at - [live site](https://womoemy.github.io/rock_paper_scissors/)
 
